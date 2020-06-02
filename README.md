@@ -8,6 +8,9 @@
 # install dependencies
 $ npm install
 
+# copy and edit configuration
+$ cp .env.example .env
+
 # serve with hot reload at localhost:3000
 $ npm run dev
 
