@@ -3,7 +3,7 @@
       <Navbar/>
       <div class="flex h-screen justify-center">
         <div class="flex flex-col self-center">
-          <input type="date" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mb-2" v-model="date">
+          <input type="date" :min="min" :max ="max" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal mb-2" v-model="date">
 
           <button :disabled="!ready" @click="generateCode"
             class ="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2"
@@ -24,9 +24,15 @@ import Navbar from '~/components/Navbar';
 
 export default {
     data() {
+        const now = new Date()
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+        const minDate = new Date(today)
+        minDate.setDate(minDate.getDate() - 28)
         return {
             date: null,
             authorizationCode: null,
+            min: minDate.toISOString().substring(0,10),
+            max: today.toISOString().substring(0,10),
         }
     },
     methods: {
