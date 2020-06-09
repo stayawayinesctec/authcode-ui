@@ -45,7 +45,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth',
+    'nuxt-i18n'
   ],
   auth: {
     strategies: {
@@ -66,10 +67,33 @@ export default {
     },
     redirect: {
       login: '/auth/login',
-      logout: '/',
+      logout: '/auth/login',
       callback: '/auth/callback',
       home: '/'
     }
+    //plugins: ['~/plugins/auth.js']
+  },
+  i18n: {
+    defaultLocale: 'en',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: false,
+      fallbackLocale: 'en'
+    },
+    locales: [
+      {
+        code: 'en',
+        file: 'en-US.js'
+      },
+      {
+        code: 'pt',
+        file: 'pt-PT.js'
+      }
+    ],
+    lazy: true,
+    langDir: 'i18n/'
   },
   /*
    ** Axios module configuration
