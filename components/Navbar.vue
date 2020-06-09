@@ -97,7 +97,13 @@ export default {
   },
   methods: {
       logout: function() {
-        this.$auth.logout();
+        const strategy = this.$auth.strategy.name
+        const logout_endpoint = this.$auth.strategies[strategy].options.logout_endpoint || null;
+
+        if (logout_endpoint != null) {
+          this.$axios.$get(logout_endpoint)
+          .then(() => this.$auth.logout());
+        }
       },
       changeLocale: function(locale) {
         this.$i18n.setLocale(locale.code)
