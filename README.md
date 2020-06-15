@@ -5,28 +5,31 @@ StayAway COVID-19 is ...
 
 ## Development
 
-This project is a Single-Page-Application built with [Nuxt.jS](https://nuxtjs.org/), a [VueJS](https://vuejs.org) framework.
+This project is a Single-Page-Application (SPA) built with [Nuxt.jS](https://nuxtjs.org/), a [VueJS](https://vuejs.org) framework.<br/>
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-To configure development environment, follow the instructions below.
-
+To configure the development environment:
 - Clone this repository
 - Install dependencies using `npm install`
 - Rename `.env.example to `.env`  and update the configuration parameters
 - Start the development environment `npm run dev`
 
 
-### Customising Template
+### Template customization
 
 This project resorts to [TailwindCSS](https://tailwindcss.com/), a utility-first CSS framework for styling.
 
 In order to customise the user interface of this project, update the CSS classes of the template section in `.vue` files.
 
-### Customising Translations
+### Internalization (i18n) customization
 
-In the `i18n` folder, there are translation files for the two already provided languages: English (en-US.js) and Portuguese (pt-PT.js).
+The `i18n` folder contains translation files for supported languages.
 
-If you wish to add more languages, create a new file and add a new locale in the `i18n.locales` key, in `nuxt.config.js`.
+Currently, the following languages are supported.
+- English - `en-US.js`
+- Português - `pt-PT.js`
+
+If you wish to add more languages, create a new file and add a new locale item to `i18n.locales`, in `nuxt.config.js` file.
 
 ## Deployment
 
