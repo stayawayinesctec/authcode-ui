@@ -16,19 +16,19 @@ To configure development environment, follow the instructions below.
 - Start the development environment `npm run dev`
 
 
-## Customising Template
+### Customising Template
 
 This project resorts to [TailwindCSS](https://tailwindcss.com/), a utility-first CSS framework for styling.
 
 In order to customise the user interface of this project, update the CSS classes of the template section in `.vue` files.
 
-## Customising Translations
+### Customising Translations
 
 In the `i18n` folder, there are translation files for the two already provided languages: English (en-US.js) and Portuguese (pt-PT.js).
 
 If you wish to add more languages, create a new file and add a new locale in the `i18n.locales` key, in `nuxt.config.js`.
 
-# Deployment
+## Deployment
 
 To deploy this project, follow the [NuxtJS SPA deployment instructions](https://nuxtjs.org/guide/commands#single-page-application-deployment-spa-), summarized below.
 
