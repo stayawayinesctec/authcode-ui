@@ -71,7 +71,6 @@ export default {
       callback: '/auth/callback',
       home: '/'
     }
-    //plugins: ['~/plugins/auth.js']
   },
   i18n: {
     defaultLocale: 'en',
