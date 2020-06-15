@@ -11,7 +11,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 To configure the development environment:
 - Clone this repository
 - Install dependencies using `npm install`
-- Rename `.env.example to `.env`  and update the configuration parameters
+- Rename `.env.example` to `.env`  and update the configuration parameters
 - Start the development environment `npm run dev`
 
 
@@ -35,5 +35,5 @@ If you wish to add more languages, create a new file and add a new locale item t
 
 To deploy this project, follow the [NuxtJS SPA deployment instructions](https://nuxtjs.org/guide/commands#single-page-application-deployment-spa-), summarized below.
 
-- Run` npm run build`.
+- Run `npm run build`.
 - Deploy the created `dist/` folder to your static hosting like Surge, GitHub Pages or nginx.
