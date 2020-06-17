@@ -1,9 +1,10 @@
 {
-  "name": "stayaway-app",
+  "name": "authcode-ui",
   "version": "1.0.0",
-  "description": "My excellent Nuxt.js project",
+  "description": "STAYAWAY COVID Health authority authorization code generation UI",
   "author": "Francisco Neves",
-  "private": true,
+  "homepage": "https://github.com/stayawayinesctec/authcode-ui",
+  "license": "EUPL-1.2",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
