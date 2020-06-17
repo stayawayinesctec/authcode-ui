@@ -1,7 +1,8 @@
-# STAWAWAY COVID-19
+# STAWAWAY COVID authcode-ui
 
-StayAway COVID-19 is ...
+This is an interface for the health authority to generate authorization codes for the STAYAWAY COVID applications. It is a re-implementation of the Swiss [CovidCode-UI](https://github.com/admin-ch/CovidCode-UI) and uses the same [CovidCode-Service](https://github.com/admin-ch/CovidCode-Service) backend.
 
+More information is available at https://github.com/stayawayinesctec/authcode-ui
 
 ## Development
 
@@ -13,7 +14,6 @@ To configure the development environment:
 - Install dependencies using `npm install`
 - Rename `.env.example` to `.env`  and update the configuration parameters
 - Start the development environment `npm run dev`
-
 
 ### Template customization
 
@@ -37,3 +37,10 @@ To deploy this project, follow the [NuxtJS SPA deployment instructions](https://
 
 - Run `npm run build`.
 - Deploy the created `dist/` folder to your static hosting like Surge, GitHub Pages or nginx.
+
+A complete DP3T setup with this UI is available at https://github.com/stayawayinesctec/dp3t-docker
+
+## Copyright and license
+
+Copyright (c) 2020 INESC TEC. Developed by Francisco Neves.
+See LICENSE file for distribution license.
