@@ -1,38 +1,36 @@
 <template>
-  <div class="bg-gray-800 pb-32">
-    <nav class="bg-gray-800">
+  <div class="pb-32 bg-fixed" style="background-image: url('/bg.png')">
+    <nav>
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="border-b border-gray-700">
+        <div class="border-b border-blue-900">
           <div class="flex items-center justify-between h-16 px-4 sm:px-0">
             <div class="flex items-center">
-              <div class="flex-shrink-0 font-medium text-gray-300 uppercase">
-                Stayaway COVID
+              <div class="flex-shrink-1 font-medium text-gray-300 uppercase">
+                <img class="object-contain h-8" src="/logo.png">
               </div>
             </div>
             <div class="hidden md:block">
               <div class="ml-4 flex items-center md:ml-6">
-                <span class="relative z-0 inline-flex shadow-sm rounded-md border border-gray-900">
+                <span class="relative z-0 inline-flex rounded-md">
                   <button type="button"
-                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-300"
+                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-300 rounded"
                     v-for="(locale, index) in availableLocales"
                     :key="locale.code"
                     @click="changeLocale(locale)"
                     :class="{
-                      'rounded-l-md': index === 0,
-                      'rounded-r-md': index === availableLocales.length - 1,
-                      'text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-900': isCurrentLocale(locale),
-                      'hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700': !isCurrentLocale(locale),
+                      'text-white bg-blue-900 focus:outline-none focus:text-white focus:bg-blue-900': isCurrentLocale(locale),
+                      'hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700': !isCurrentLocale(locale),
                       }"
                   >
                     {{ $t(`lang.${locale.code}`) }}
                   </button>
                 </span>
-                <a href="#" v-if="$auth.loggedIn" @click.prevent="logout" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">{{ $t('Logout') }}</a>
+                <a href="#" v-if="$auth.loggedIn" @click.prevent="logout" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700">{{ $t('Logout') }}</a>
               </div>
             </div>
             <div class="-mr-2 flex md:hidden" @click="isOpen = !isOpen">
               <!-- Mobile menu button -->
-              <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white">
+              <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 focus:text-white">
                 <!-- Menu open: "hidden", Menu closed: "block" -->
                 <svg class="h-6 w-6" :class="[isOpen ? 'hidden' : 'block']" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -52,12 +50,12 @@
 
         Open: "block", closed: "hidden"
       -->
-      <div class="border-b border-gray-700 md:hidden" :class="[isOpen ? 'block' : 'hidden']">
+      <div class="border-b border-blue-900 md:hidden" :class="[isOpen ? 'block' : 'hidden']">
         <div class="px-2 py-3 sm:px-3">
           <div role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
             <a
               href="#"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700" role="menuitem"
+              class="block px-3 py-2 rounded-md font-medium text-gray-400 hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700" role="menuitem"
               v-for="(locale, index) in availableLocales"
               :key="locale.code"
               @click="changeLocale(locale)"
@@ -65,16 +63,16 @@
                 'rounded-l-md': index === 0,
                 'mt-1': index > 0,
                 'rounded-r-md': index === availableLocales.length - 1,
-                'text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-900': isCurrentLocale(locale),
-                'hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700': !isCurrentLocale(locale),
+                'text-white bg-blue-900 hover:text-white hover:bg-blue-900 focus:outline-none focus:text-white focus:bg-blue-900': isCurrentLocale(locale),
+                'hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700': !isCurrentLocale(locale),
                 }"
             >
               <span class="uppercase">{{ locale.code }}</span>
             </a>
           </div>
         </div>
-        <div class="px-2 py-3 sm:px-3 border-t border-gray-700" v-if="$auth.loggedIn">
-          <a href="#" @click.prevent="logout" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">{{ $t('Logout') }}</a>
+        <div class="px-2 py-3 sm:px-3 border-t border-blue-900" v-if="$auth.loggedIn">
+          <a href="#" @click.prevent="logout" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700">{{ $t('Logout') }}</a>
         </div>
       </div>
     </nav>
