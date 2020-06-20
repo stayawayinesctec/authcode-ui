@@ -12,7 +12,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/axios": "^5.11.0",
     "nuxt": "^2.0.0",
     "vuejs-datepicker": "^1.6.2"
   },
