@@ -6,8 +6,7 @@ More information is available at https://github.com/stayawayinesctec/authcode-ui
 
 ## Development
 
-This project is a Single-Page-Application (SPA) built with [Nuxt.js](https://nuxtjs.org/), a [Vue.js](https://vuejs.org) framework.<br/>
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+This project is a Single-Page-Application (SPA) built with [Nuxt.js](https://nuxtjs.org/), a [Vue.js](https://vuejs.org) framework. For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 To configure the development environment:
 - Clone this repository
@@ -43,4 +42,4 @@ A complete DP3T setup with this UI is available at https://github.com/stayawayin
 ## Copyright and license
 
 Copyright (c) 2020 INESC TEC. Developed by [Francisco Neves](https://github.com/fntneves).
-See LICENSE file for distribution license.
+Distribution license EUPL 1.2. See details in file LICENSE.
