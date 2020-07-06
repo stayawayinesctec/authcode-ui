@@ -23,7 +23,7 @@
     "@tailwindcss/ui": "^0.3.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "nuxt-i18n": "^6.12.2",
+    "nuxt-i18n": "^6.13.1",
     "oidc-client": "^1.10.1",
     "prettier": "^1.19.1"
   }
